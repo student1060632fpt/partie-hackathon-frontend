@@ -1,10 +1,10 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { PageHeader, Card, Button } from "antd";
 import { utils } from "near-api-js";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 const { Meta } = Card;
 
-export default function Market({isSignedIn, nftMarketplace, wallet}) {
+export default function Market({ isSignedIn, nftMarketplace, wallet }) {
     const [sales, setSales] = useState([]);
 
     async function fetchSales() {
@@ -31,16 +31,17 @@ export default function Market({isSignedIn, nftMarketplace, wallet}) {
                 className="site-page-header"
                 title="Market"
             />
+            <p>abc dè</p>
 
-            <div style={{padding: 30, display: "flex", flexWrap: "wrap"}}>
+            <div style={{ padding: 30, display: "flex", flexWrap: "wrap" }}>
                 {
-                    sales.map( item => {
+                    sales.map(item => {
                         return (
                             <Card
                                 key={item.sale_id}
                                 hoverable
                                 style={{ width: 240, marginRight: 15, marginBottom: 15 }}
-                                cover={<img style={{height: 300, width: "100%", objectFit: "contain"}} alt="Media NFT" src={item.token.metadata.media} />}
+                                cover={<img style={{ height: 300, width: "100%", objectFit: "contain" }} alt="Media NFT" src={item.token.metadata.media} />}
                                 actions={[
                                     <Button onClick={() => handleBuyNFT(item)} icon={<ShoppingCartOutlined />}> Buy </Button>
                                 ]}

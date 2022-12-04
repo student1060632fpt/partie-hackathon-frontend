@@ -38,7 +38,9 @@
     "react-dom": "^18.1.0",
     "react-router": "^6.4.3",
     "react-router-dom": "^6.4.3",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "react-refresh": "^0.8.3"
   },
   "resolutions": {
     "@babel/preset-env": "7.13.8"
